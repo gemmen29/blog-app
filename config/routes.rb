@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     resources :posts, on: :show, only: [:index, :show]
   end
 
-  get '/', to: redirect('/users')
+  root "users#index"
 end
