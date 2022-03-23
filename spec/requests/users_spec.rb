@@ -11,5 +11,9 @@ RSpec.describe "Users", type: :request do
     it "Is correct template rendered" do
       expect(response).to render_template('index')
     end
+
+    it "Is the body includes correct text" do
+      expect(response.body).to include('Index')
+    end
   end
 end
