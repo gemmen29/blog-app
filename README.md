@@ -8,6 +8,7 @@
 
 - Ruby
 - Ruby on Rails
+- Rspec
 
 ## Getting Started
 
@@ -19,6 +20,7 @@ To get a local copy up and running follow these simple example steps:
 4- You can also clone the project using the **`git clone`** command.<br>
 5- Run the command `bundle install` to install all gems of the project.<br>
 6- To run the server use command `rails s` and to see it go to your browser and use this link `http://127.0.0.1:3000/`.<br>
+7- To run the tests use command `bundle exec rspec`.<br>
 
 ## Author
 
