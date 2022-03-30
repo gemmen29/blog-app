@@ -1,1 +1,36 @@
-<h1>Users Show Action</h1>
+<h1 class="user_show_main_header">Users Details</h1>
+<div class="users_wrapper">
+  <div class="user_show_container">
+    <%= image_tag(@user.photo, class: "user_image") %>
+    <div class="user_info">
+      <h2> <%= @user.name %> </h2>
+      <div class="user_info__posts_counter">
+        Number of posts:
+        <%= @user.posts_counter || 0 %>
+      </div>
+    </div>
+  </div>
+  <div class="bio_container">
+    <h3>Bio</h3>
+    <p class="bio_paragraph">
+      <%= @user.bio %>
+    </p>
+  </div>
+</div>
+
+<div class="users_wrapper">
+  <% @user.three_most_recent_posts.each_with_index do |post, index| %>
+    <a href="/users/<%= @user.id %>/posts" class="user_index_container">
+      <div class="user_info">
+        <h2>Post #<%= index+1 %></h2>
+        <p class="post_text"><%= post.text %></p>
+        <div class="user_info__posts_counter">
+          Comments:
+          <%= post.comments_counter || 0 %>
+          , Likes:
+          <%= post.likes_counter || 0 %>
+        </div>
+      </div>
+    </a>
+  <% end %>
+</div>

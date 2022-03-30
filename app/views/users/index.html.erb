@@ -1,1 +1,15 @@
-<h1>Users Index Action</h1>
+<h1 class="user_index_main_header">Show all users</h1>
+<div class="users_wrapper">
+  <% @users.each do |user| %>
+    <a href="/users/<%= user.id %>" class="user_index_container">
+      <%= image_tag(user.photo, class: "user_image") %>
+      <div class="user_info">
+        <h2> <%= user.name %> </h2>
+        <div class="user_info__posts_counter">
+          Number of posts:
+          <%= user.posts_counter || 0 %>
+        </div>
+      </div>
+    </a>
+  <% end %>
+</div>
