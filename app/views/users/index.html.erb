@@ -2,7 +2,7 @@
 <div class="users_wrapper">
   <% @users.each do |user| %>
     <a href="/users/<%= user.id %>" class="user_index_container">
-      <%= image_tag("https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1", class: "user_image") %>
+      <%= image_tag(user.photo, class: "user_image") %>
       <div class="user_info">
         <h2> <%= user.name %> </h2>
         <div class="user_info__posts_counter">
