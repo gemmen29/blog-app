@@ -23,4 +23,16 @@ RSpec.describe Post, type: :model do
   it 'subject should be valid' do
     expect(subject).to be_valid
   end
+
+  
+  it 'five_most_recent_comments should return a right result' do 
+    subject.comments.create( text: 'This is my first comment')
+    subject.comments.create( text: 'This is my first comment')
+    subject.comments.create( text: 'This is my first comment')
+    subject.comments.create( text: 'This is my first comment')
+    subject.comments.create( text: 'This is my first comment')
+    subject.comments.create( text: 'This is my first comment')
+    subject.comments.create( text: 'This is my first comment')
+    expect(subject.five_most_recent_comments.count).to eq(5)
+  end
 end
