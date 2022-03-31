@@ -5,6 +5,8 @@ class Post < ApplicationRecord
 
   after_save :update_post_user_counter
 
+  validates :title, presence: true,  length: { maximum: 250 }
+
   def update_post_user_counter
     user.increment!(:posts_counter)
   end
