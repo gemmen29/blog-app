@@ -77,3 +77,23 @@ hr {
   color: white;
   border-radius: 5px;
 }
+
+.new_comment {
+  display: flex;
+  width: 60vw;
+  padding: 0 5px 15px 5px;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.new_comment_btn {
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+
+.form_comment {
+  flex-grow: 1;
+}
