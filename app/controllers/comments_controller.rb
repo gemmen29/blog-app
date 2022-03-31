@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html do
         if comment.save
-          flash[:success] = "Comment saved successfully"
+          flash[:success] = 'Comment saved successfully'
           redirect_to "/users/#{current_user.id}/posts"
         end
       end
