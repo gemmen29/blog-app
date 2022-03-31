@@ -23,7 +23,6 @@ RSpec.describe Post, type: :model do
   it 'subject should be valid' do
     expect(subject).to be_valid
   end
-
   
   it 'five_most_recent_comments should return a right result' do 
     subject.comments.create( text: 'This is my first comment')
@@ -34,5 +33,9 @@ RSpec.describe Post, type: :model do
     subject.comments.create( text: 'This is my first comment')
     subject.comments.create( text: 'This is my first comment')
     expect(subject.five_most_recent_comments.count).to eq(5)
+  end
+
+  it 'update_post_user_counter should return a right result when calling it with after_save' do 
+    expect(subject.user.posts_counter).to eq(1)
   end
 end
