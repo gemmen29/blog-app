@@ -1,4 +1,9 @@
 <h1 class="user_show_main_header">Users Details</h1>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 <div class="users_wrapper">
   <div class="user_show_container">
     <%= image_tag(@user.photo, class: "user_image") %>

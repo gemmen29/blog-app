@@ -1,3 +1,8 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 <div class="form-container">
   <%= form_with model: @post, url: '/posts', html: {class: "new-post"} do |form| %>
     <div class="control-container">
