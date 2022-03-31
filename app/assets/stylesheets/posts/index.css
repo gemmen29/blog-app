@@ -62,3 +62,18 @@ hr {
   background-color: #000000;
   width: 80%;
 }
+
+.new_like {
+  display: flex;
+  width: 60vw;
+  padding: 0 5px 15px 0;
+  justify-content: flex-end;
+}
+
+.new_like_btn {
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
