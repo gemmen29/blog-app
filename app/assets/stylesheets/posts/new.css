@@ -1,0 +1,35 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.new-post {
+  width: 60vw;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.control-container {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  gap: 4px;
+  font-size: 1.2rem;
+}
+
+.form-control {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  padding: 3px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-btn {
+  font-size: 1.2rem;
+  padding: 5px;
+}

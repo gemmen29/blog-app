@@ -1,0 +1,15 @@
+<div class="form-container">
+  <%= form_with model: @post, url: '/posts/new', html: {class: "new-post"} do |form| %>
+    <div class="control-container">
+      <%= form.label :title %><br>
+      <%= form.text_field :title, class: "form-control", placeholder: "Enter post title" %>
+    </div>
+    <div class="control-container">
+      <%= form.label :text %><br>
+      <%= form.text_area :text, class: "form-control", placeholder: "Enter post text" %>
+    </div>
+    <div class="control-container button-container">
+      <%= form.submit "Post", class: "submit-btn" %>
+    </div>
+  <% end %>
+</div>
