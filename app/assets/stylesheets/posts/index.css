@@ -57,3 +57,59 @@
 .comment_info {
   display: flex;
 }
+
+hr {
+  background-color: #000;
+  width: 80%;
+}
+
+.new_like {
+  display: flex;
+  width: 60vw;
+  padding: 0 5px 15px 0;
+  justify-content: flex-end;
+}
+
+.new_like_btn {
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.new_comment {
+  display: flex;
+  width: 60vw;
+  padding: 17px 5px 15px 5px;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.new_comment_btn {
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: #0909e0;
+  color: white;
+  border-radius: 5px;
+}
+
+.form_comment {
+  flex-grow: 1;
+}
+
+.create_post_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  width: 60vw;
+}
+
+.create-new-post-link {
+  text-decoration: none;
+  background-color: #036e03;
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
