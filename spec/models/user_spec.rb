@@ -20,7 +20,14 @@ RSpec.describe User, type: :model do
   end
 
   it 'posts_counter be valid' do 
-    subject.posts_counter = 1
     expect(subject).to be_valid
+  end
+
+  it 'posts_counter be valid' do 
+    subject.posts.create(title: 'Hello', text: 'This is my first post')
+    subject.posts.create(title: 'Hello', text: 'This is my first post')
+    subject.posts.create(title: 'Hello', text: 'This is my first post')
+    subject.posts.create(title: 'Hello', text: 'This is my first post')
+    expect(subject.three_most_recent_posts.count).to eq(3)
   end
 end
