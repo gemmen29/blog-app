@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
     expect(subject).to be_valid
   end
 
-  it 'posts_counter be valid' do 
+  it 'three_most_recent_posts should return a right result' do 
     subject.posts.create(title: 'Hello', text: 'This is my first post')
     subject.posts.create(title: 'Hello', text: 'This is my first post')
     subject.posts.create(title: 'Hello', text: 'This is my first post')
