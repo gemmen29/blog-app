@@ -9,4 +9,9 @@ RSpec.describe Post, type: :model do
     subject.title = nil
     expect(subject).to_not be_valid
   end
+
+  it 'likes_counter should be greater_than_or_equal zero' do 
+    subject.likes_counter = -1
+    expect(subject).to_not be_valid
+  end
 end
